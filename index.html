@@ -6,9 +6,9 @@
 </head>
 <style>
 #wrapper{
+	margin:auto;
+	}
 	
-	
-	margin:auto;}
 input {
 	width: 35px;
 	height: 25px;
@@ -24,6 +24,9 @@ input {
 .pushLeft {
 	margin-left: 20px;
 }
+.attention{
+	color:red;}
+	
 #button {
 	text-align: center;
 	background-color: #CCFF00;
@@ -33,6 +36,9 @@ input {
 	margin-left:-10px;
 	
 }
+
+
+
 .side{display:inline; float:left;}
 
 .clear{clear:both;}
@@ -43,63 +49,73 @@ input {
 <div id = "wrapper">
 <h1>Lunk's Fantastical Stat Calculator</h1>
 <h2>Because FUCK Stat Loss</h2>
-<div> <span>
+<div> 
   <h3 id = "baseLabel">Base Strength&nbsp;</h3>
   <input id = "baseStrength" value="24" type = "text" />
-  </span> <span>
+  
   <h3 id = "baseLabel">Temp Modifier</h3>
   <input id = "tempStrength"  value="0" type = "text" />
-  </span> </div>
-<div> <span>
+   </div>
+<div> 
   <h3 id = "baseLabel">Base Dexterity</h3>
   <input id = "baseDex" value="16" type = "text" />
-  </span> <span>
+   
   <h3 id = "baseLabel">Temp Modifier</h3>
   <input id = "tempDex" value="0" type = "text" />
-  </span> </div>
-<div> <span>
+   </div>
+<div> 
   <h3 id = "baseLabel">Base Attack Bonus</h3>
   <input id = "bab" value="10" type = "text" />
-  </span> </div>
-<div> <span>
+   </div>
+<div> 
   <h3 id = "baseLabel">Enhancement</h3>
   <input id = "enh" value="1" type = "text" />
-  </span> </div>
-<div> <span>
+   </div>
+<div> 
   <h3 id = "baseLabel">Armor</h3>
   <input id = "armor" value="7" type = "text" />
-  </span> </div>
+   </div>
+  <div> 
+  <h3 id = "baseLabel">Monsterous Physique</h3>
+  <input id = "monsterous"  type = "checkbox" />
+   </div>
+    <div> 
+  <h3 id = "baseLabel">Monsterous Beast</h3>
+  <select>
+  	<option value="gargoyle">Gargoyle</option>
+  </select>
+   </div> 
 
 
 <div class = "side">
   <h2>Un-Raged</h2>
   <div class = "pushLeft">
-    <div> <span>
+    <div> 
       <h3 id = "baseLabel">Total Armor Class</h3>
-      </span> <br/>
+       <br/>
       <span class = "pushLeft">
-      <h3 id = "baseLabel"> <span id = "armorTotal">20</span> = 10 + <span class = "ACarmor">7</span> + <span class = "ACdex">3</span> </h3>
+      <h3 id = "baseLabel"> <span id = "armorTotal">20</span> = 10 + <span class = "ACarmor">7</span> + <span class = "ACdex">3</span> <span class = "naturalArmor"></span> </h3>
       </span> </div>
-    <div> <span>
+    <div> 
       <h3 id = "baseLabel">Touch Armor Class</h3>
-      </span> <br/>
+       <br/>
       <span class = "pushLeft">
       <h3 id = "baseLabel"><span id = "armorTouch">13</span> = 10 + <span class = "ACdex">3</span></h3>
       </span> </div>
-    <div> <span>
+    <div> 
       <h3 id = "baseLabel">Flatfoot Armor Class</h3>
-      </span> <br/>
+       <br/>
       <span class = "pushLeft">
-      <h3 id = "baseLabel"><span id = "armorFlatFoot">17</span> = 10 + <span class= "ACarmor">7</span></h3>
+      <h3 id = "baseLabel"><span id = "armorFlatFoot">17</span> = 10 + <span class= "ACarmor">7</span> <span class = "naturalArmor"></span></h3>
       </span> </div>
-    <div> <span>
+    <div> 
       <h3 id = "baseLabel">Attacks</h3>
-      </span> <br/>
+       <br/>
       <h3 id = "baseLabel"><span class = "pushLeft">+<span id = "attack1">10</span> / +<span id = "attack2">5</span></h3>
-      </span> </div>
-    <div> <span>
+      </span> </span></div>
+    <div> 
       <h3 id = "baseLabel">Damage</h3>
-      </span> <br/>
+       <br/>
       <h3 id = "baseLabel"><span class = "pushLeft">2d4 + <span id = "str15">10</span> + <span class = "enhancement">1</span> + <span id = "patk">9</span></span> (2d4 + <span id = "damageTotal">0</span>)</h3>
     </div>
   </div>
@@ -107,36 +123,36 @@ input {
 </div>
 
 <div class = "side">
-  <h2>Raged</h2>
+  <h2>Raged <span class = "attention">(DO NOT FORGET THE 20% MISS CHANCE)</span></h2>
   <div class = "pushLeft">
-    <div> <span>
+    <div> 
       <h3 id = "baseLabel">Total Armor Class</h3>
-      </span> <br/>
+       <br/>
       <span class = "pushLeft">
-      <h3 id = "baseLabel"> <span id = "ragearmorTotal">20</span> = 10 + <span class = "ACarmor">7</span> + <span class = "rageACdex">3</span> - 1 - 2</h3>
+      <h3 id = "baseLabel"> <span id = "ragearmorTotal">20</span> = 10 + <span class = "ACarmor">7</span> + <span class = "rageACdex">3</span> - 1 - 2 <span class = "naturalArmor"></span></h3>
       </span> </div>
-    <div> <span>
+    <div> 
       <h3 id = "baseLabel">Touch Armor Class</h3>
-      </span> <br/>
+       <br/>
       <span class = "pushLeft">
       <h3 id = "baseLabel"><span id = "ragearmorTouch">13</span> = 10 + <span class = "rageACdex">3</span> - 1 - 2</h3>
       </span> </div>
-    <div> <span>
+    <div> 
       <h3 id = "baseLabel">Flatfoot Armor Class</h3>
-      </span> <br/>
+       <br/>
       <span class = "pushLeft">
-      <h3 id = "baseLabel"><span id = "ragearmorFlatFoot">17</span> = 10 + <span class= "ACarmor">7</span> - 1 - 2</h3>
+      <h3 id = "baseLabel"><span id = "ragearmorFlatFoot">17</span> = 10 + <span class= "ACarmor">7</span> - 1 - 2 <span class = "naturalArmor"></span></h3>
       </span> </div>
-    <div> <span>
+    <div> 
       <h3 id = "baseLabel">Attacks</h3>
-      </span> <br/>
+       <br/>
       <h3 id = "baseLabel"><span class = "pushLeft">+<span id = "rageattack1">10</span> / +<span id = "rageattack2">5</span></h3>
-      </span> </div>
-    <div> <span>
+      </span></span> </div>
+    <div> 
       <h3 id = "baseLabel">Damage</h3>
-      </span> <br/>
+       <br/>
       <h3 id = "baseLabel">
-      	<span class = "pushLeft">2d6 + <span id = "ragestr15">10</span> + <span class = "enhancement">1</span> + <span id = "patk">9</span></span> (2d4 + <span id = "ragedamageTotal">0</span>)</h3>
+      	<span class = "pushLeft">2d6 + <span id = "rageStr15">10</span> + <span class = "enhancement">1</span> + <span id = "patk">9</span></span> (2d4 + <span id = "ragedamageTotal">0</span>)</h3>
     </div>
   </div>
   
@@ -157,6 +173,9 @@ input {
 		var baseAttackBonus = parseInt(document.getElementById("bab").value);
 		var armor = parseInt(document.getElementById("armor").value);
 		var enh = parseInt(document.getElementById("enh").value);
+		var monsterous = document.getElementById("monsterous").checked;
+		var naturalArmor = document.getElementsByClassName("naturalArmor");
+		
 		
 		var armorTotal = document.getElementById("armorTotal");
 		var armorTouch = document.getElementById("armorTouch");
@@ -177,14 +196,14 @@ input {
 		var ragearmorTotal = document.getElementById("ragearmorTotal");
 		var ragearmorTouch = document.getElementById("ragearmorTouch");
 		var ragearmorFlatFoot = document.getElementById("ragearmorFlatFoot");
-		var ragestr = (baseStrength + tempStrength - 10)/2;
+		var rageStr = (baseStrength + tempStrength - 10)/2;
 		var ragedex = (baseDexterity + tempDexterity - 10)/2;
 		var rageACTotal = 10 + dex + armor;
 		var rageACTouch = 10 + dex;
 		var rageACFlat  = 10 + armor;
 		var rageACdex = document.getElementsByClassName("rageACdex");
 		var rageACarmor = document.getElementsByClassName("rageACarmor");
-		var ragestr15 = document.getElementById("ragestr15");
+		var rageStr15 = document.getElementById("rageStr15");
 		var rageattack1 = document.getElementById("rageattack1");
 		var rageattack2 = document.getElementById("rageattack2");
 		var ragedamagetotal = document.getElementById("ragedamageTotal");
@@ -192,6 +211,9 @@ input {
 		var button = document.getElementById("button");
 		var enhancement = document.getElementsByClassName("enhancement");
 		button.onclick = calculate;		
+		
+		var checkbox = document.getElementById("monsterous");
+		checkbox.onchange = calculate;
 		var input = document.querySelectorAll("input");
 		for (j=0; j<input.length; j++){
 			input[j].addEventListener("blur", calculate);
@@ -201,7 +223,8 @@ input {
 		
 		
 		function calculate(){
-
+			
+		
 		for (i=0;i<enhancement.length;i++){
 			enhancement[i].innerHTML = ""+enh;
 
@@ -217,11 +240,33 @@ input {
 		armorTotal = document.getElementById("armorTotal");
 		armorTouch = document.getElementById("armorTouch");
 		armorFlatFoot = document.getElementById("armorFlatFoot");
+		
+		monsterous = document.getElementById("monsterous").checked;
+		
+		if (monsterous){
+			for(k=0;k<naturalArmor.length;k++){
+				naturalArmor[k].innerHTML = "+ 2";
+			}
+			
+		}else{
+			for(k=0;k<naturalArmor.length;k++){
+				naturalArmor[k].innerHTML = "";	
+			}
+		}
+		
 		str = Math.floor((baseStrength + tempStrength - 10)/2);
+		if (monsterous){
+			str = str + 2;	
+		}
 		dex = Math.floor((baseDexterity + tempDexterity - 10)/2);
 		ACTotal = 10 + dex + armor;
 		ACTouch = 10 + dex;
 		ACFlat  = 10 + armor;
+		if (monsterous){
+			ACTotal = ACTotal + 2;
+			ACFlat = ACFlat + 2;
+			str = str + 2;	
+		}
 		armorTotal.innerHTML = ACTotal;
 		armorTouch.innerHTML = ACTouch;
 		armorFlatFoot.innerHTML = ACFlat;
@@ -242,10 +287,17 @@ input {
 		ragearmorTotal = document.getElementById("ragearmorTotal");
 		ragearmorTouch = document.getElementById("ragearmorTouch");
 		ragearmorFlatFoot = document.getElementById("ragearmorFlatFoot");
-		ragestr = Math.floor((baseStrength + tempStrength + 4 - 10)/2);
+		rageStr = Math.floor((baseStrength + tempStrength + 4 - 10)/2);
+
+		
 		rageACTotal = 10 + dex + armor - 1 - 2;
 		rageACTouch = 10 + dex - 1 - 2;
 		rageACFlat  = 10 + armor - 1 - 2;
+		if (monsterous){
+			rageACTotal = rageACTotal + 2;
+			rageACFlat = rageACFlat + 2;
+			rageStr = rageStr + 2;	
+		}
 		ragearmorTotal.innerHTML = rageACTotal;
 		ragearmorTouch.innerHTML = rageACTouch;
 		ragearmorFlatFoot.innerHTML = rageACFlat;
@@ -253,15 +305,15 @@ input {
 			rageACdex[i].innerHTML = "("+dex+")";
 			}
 
-		ragestr15.innerHTML = ""+Math.floor(ragestr*1.5);		
+		rageStr15.innerHTML = ""+Math.floor(rageStr*1.5);		
 		
 		
 		
-		rageattack1.innerHTML = baseAttackBonus + ragestr + 1;
-		rageattack2.innerHTML = baseAttackBonus + ragestr - 5 - 3 + 1;
+		rageattack1.innerHTML = baseAttackBonus + rageStr + 1;
+		rageattack2.innerHTML = baseAttackBonus + rageStr - 5 - 3 + 1;
 
 
-		ragedamagetotal.innerHTML = Math.floor(ragestr*1.5)+1+9;
+		ragedamagetotal.innerHTML = Math.floor(rageStr*1.5)+1+9;
 		}
 	}
 </script>
